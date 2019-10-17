@@ -14,7 +14,7 @@ def api_query(indicator_code, params):
 
 
 
-def full_query(indicator_code, params):
+def full_query(indicator_code, params, folder_name):
     pages = api_query(indicator_code, params)[0]['pages']
     data = pd.DataFrame()
     
