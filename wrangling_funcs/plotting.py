@@ -6,7 +6,7 @@ from wrangling_funcs.cleaning_fn import *
 def return_figures():
 
 	params= {'format': 'json', 'per_page': '1000', 'date':'1960:2017'}
-	# data = full_query('SP.POP.TOTL', params)
+	data = full_query('SP.POP.TOTL', params)
 
 	df = extract_data('/Users/wafic/Documents/population_app/Data')
 

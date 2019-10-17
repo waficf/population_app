@@ -18,7 +18,8 @@ def full_query(indicator_code, params):
     pages = api_query(indicator_code, params)[0]['pages']
     data = pd.DataFrame()
     
-    folder_name = '/Users/wafic/Documents/population_app/Data' 
+    if not os.path.exists(folder_name):
+        os.makedirs(folder_name)
     
     for page in range(pages):
         file_name = indicator_code+'_'+str(page)+'.txt'
