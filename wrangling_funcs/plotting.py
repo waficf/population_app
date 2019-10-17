@@ -8,7 +8,7 @@ def return_figures():
 	params= {'format': 'json', 'per_page': '1000', 'date':'1960:2017'}
 	# data = full_query('SP.POP.TOTL', params, './data/' + file_name)
 
-	df = extract_data('/Users/wafic/Documents/population_app/Data')
+	df = extract_data('/Users/wafic/Github/population_app/Data')
 
 	df_country = country_data(df)
 
@@ -94,7 +94,7 @@ def return_figures():
 
 	df_classif = income_classification(df)
 
-	df_classif_dec = df_classif[(df_classif.year.isin(decades))&(df_classif.country.isin(['High income', 'Low income']))]
+	df_classif_dec = df_classif[(df_classif.year.isin(decades)) & (df_classif.country.isin(['High income', 'Low income']))]
 
 	df_classif_dec = df_classif_dec.drop(columns='code')
 

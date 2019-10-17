@@ -62,7 +62,7 @@ def extract_data(folder_name):
 
 
 def country_data(df):
-	country_code = pd.read_csv('/Users/wafic/Documents/population_app/Data/country_map.txt', sep='\t', dtype={'3let':str, '2let':str})
+	country_code = pd.read_csv('/Users/wafic/Github/population_app/Data/country_map.txt', sep='\t', dtype={'3let':str, '2let':str})
 	country_pop = df.merge(country_code, left_on='code', right_on='2let')
 	return country_pop
 
