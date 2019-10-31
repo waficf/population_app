@@ -1,1 +1,1 @@
-web gunicorn population:app
+web: gunicorn population:app

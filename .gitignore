@@ -1,0 +1,4 @@
+population_env
+*\__pycache__
+.ipynb_checkpoints
+temp-plot.html
